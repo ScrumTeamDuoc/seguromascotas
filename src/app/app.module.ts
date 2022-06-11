@@ -7,14 +7,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterVideoComponent } from './footer-video/footer-video.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { QrcodeComponent } from './qrcode/qrcode.component';
+import { CardserviciosComponent } from './cardservicios/cardservicios.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ //Declarar componentes
     AppComponent,
     NavbarComponent,
     FooterComponent,
     FooterVideoComponent,
-    CarouselComponent
+    CarouselComponent,
+    QrcodeComponent,
+    CardserviciosComponent
   ],
   imports: [
     BrowserModule,
@@ -23,4 +27,4 @@ import { CarouselComponent } from './carousel/carousel.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } //Aqui se exporta el modulo.

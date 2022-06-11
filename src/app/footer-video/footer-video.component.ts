@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterVideoComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+
+    console.log('FooterVideoComponent cargado');
+  }
 
   ngOnInit(): void {
   }
