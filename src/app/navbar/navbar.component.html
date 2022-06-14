@@ -1,46 +1,47 @@
+<router-outlet></router-outlet>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">{{titulo}}</a>
+      <a class="navbar-brand" routerLink="/index">{{titulo}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" routerLink="/index">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Servicios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Consultas</a></li>
+              <li><a class="dropdown-item" routerLink="/consultas">Consultas</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Terapias</a></li>
+              <li><a class="dropdown-item" routerLink="/terapias">Terapias</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Operaciones</a></li>
+              <li><a class="dropdown-item" routerLink="/operaciones">Operaciones</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Medicamentos</a></li>
+              <li><a class="dropdown-item" routerLink="/medicamentos">Medicamentos</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Exámenes</a></li>
+              <li><a class="dropdown-item" routerLink="/examenes">Exámenes</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Farmacias PetFine</a></li>
+              <li><a class="dropdown-item" routerLink="/farmacias">Farmacias PetFine</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cotizador</a>
+            <a class="nav-link" routerLink="/cotizador">Cotizador</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Solicitar consulta</a>
+            <a class="nav-link" routerLink="/solicitarconsulta">Solicitar consulta</a>
           </li>     
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Mi plan</a>
+            <a class="nav-link" routerLink="/contacto">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link disabled" routerLink="/miplan" tabindex="-1" aria-disabled="true">Mi plan</a>
           </li>
         </ul>
-          <button class="btn btn-outline-success" type="submit" href="#">Iniciar Sesión</button>     
+          <button class="btn btn-outline-success" type="submit" routerLink="/login">Iniciar Sesión</button>     
       </div>
     </div>
   </nav>
