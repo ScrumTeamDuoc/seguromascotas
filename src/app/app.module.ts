@@ -29,6 +29,7 @@ import { ConsultascardsComponent } from './consultascards/consultascards.compone
 import { MapagoogleComponent } from './mapagoogle/mapagoogle.component';
 import { FormulariocotizarComponent } from './formulariocotizar/formulariocotizar.component';
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
+import { CardterapiasComponent } from './cardterapias/cardterapias.component';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -56,7 +57,8 @@ import { WhatsappComponent } from './whatsapp/whatsapp.component';
     ConsultascardsComponent,
     MapagoogleComponent,
     FormulariocotizarComponent,
-    WhatsappComponent
+    WhatsappComponent,
+    CardterapiasComponent
   ],
   imports: [
     appRoutingProviders,
