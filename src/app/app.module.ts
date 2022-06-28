@@ -26,6 +26,7 @@ import { RegistrousuarioComponent } from './templates/registrousuario/registrous
 import { IndexComponent } from './templates/index/index.component';
 import { BaseComponent } from './templates/base/base.component';
 import { ConsultascardsComponent } from './consultascards/consultascards.component';
+import { MapagoogleComponent } from './mapagoogle/mapagoogle.component';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -50,7 +51,8 @@ import { ConsultascardsComponent } from './consultascards/consultascards.compone
     RegistrousuarioComponent,
     IndexComponent,
     BaseComponent,
-    ConsultascardsComponent
+    ConsultascardsComponent,
+    MapagoogleComponent
   ],
   imports: [
     appRoutingProviders,
