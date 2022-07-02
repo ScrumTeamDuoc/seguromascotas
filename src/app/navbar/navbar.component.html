@@ -1,44 +1,74 @@
 <router-outlet></router-outlet>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <img src="../../assets/img/petfinelogo-02-01.png" alt="LogoPet">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/index">Inicio</a>
-          </li>
+  <div class="container-fluid">
+    <img src="../../assets/img/petfinelogo-02-01.png" alt="LogoPet">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/index">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Servicios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/consultas">Consultas</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" routerLink="/terapias">Terapias</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" routerLink="/operaciones">Operaciones</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="https://www.pethappy.cl/categorias/67/medicamentos"
+                target="_blank">Medicamentos</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="https://reservahora.pethappy.cl/#/atencion-veterinaria"
+                target="_blank">Exámenes</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" routerLink="/farmacias">Farmacias PetFine</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cotizador">Cotizador</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://wa.me/+56944111902?text=Hola, necesito agendar una hora"
+            target="_blank">Solicitar consulta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contacto">Contacto</a>
+        </li>
+      </ul>
+      <ng-container *ngIf="!auth.isLoggedIn();">
+        <button class="btn btn-outline-success" type="submit" routerLink="/login">Iniciar Sesión</button>
+      </ng-container>
+      <ng-container *ngIf="auth.isLoggedIn();">
+        <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Servicios
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" routerLink="/consultas">Consultas</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" routerLink="/terapias">Terapias</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" routerLink="/operaciones">Operaciones</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://www.pethappy.cl/categorias/67/medicamentos" target="_blank">Medicamentos</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="https://reservahora.pethappy.cl/#/atencion-veterinaria" target="_blank">Exámenes</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" routerLink="/farmacias">Farmacias PetFine</a></li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">{{ user.username }}</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownUser">
+              <li class="nav-item"><a class="dropdown-item">Perfil</a></li>
+              <li class="nav-item"><a class="dropdown-item" (click)="logOut()">Cerrar Sesión</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/cotizador">Cotizador</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://wa.me/+56944111902?text=Hola, necesito agendar una hora" target="_blank">Solicitar consulta</a>
-          </li>     
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contacto">Contacto</a>
-          </li>
         </ul>
-          <button class="btn btn-outline-success" type="submit" routerLink="/login">Iniciar Sesión</button>     
-      </div>
+
+      </ng-container>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,4 +1,5 @@
-<div class="container" style="position:absolute; left:0; right:0; top: 50%; transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%);">
+<div class="container"
+    style="position:absolute; left:0; right:0; top: 50%; transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%);">
     <div class="row justify-content-center">
         <div class="col-md-10 col-lg-9 col-xl-9 col-xxl-7">
             <div class="card shadow-lg o-hidden border-0 my-5">
@@ -15,12 +16,18 @@
                                         Bienvenido
                                     </h4>
                                 </div>
-                                <form class="user">
-                                    <div class="mb-3"><input class="form-control form-control-user" type="email" id="email" aria-describedby="emailHelp" placeholder="Dirección de correo electrónico" name="email" required=""></div>
-                                    <div class="mb-3"><input class="form-control form-control-user" type="password" placeholder="Contraseña" name="Contraseña" required=""></div>
+                                <form class="user" [formGroup]="userForm">
+                                    <div class="mb-3"><input class="form-control form-control-user" type="email"
+                                            id="email" aria-describedby="emailHelp"
+                                            placeholder="Dirección de correo electrónico" name="email"
+                                            formControlName="username">
+                                    </div>
+                                    <div class="mb-3"><input class="form-control form-control-user" type="password"
+                                            placeholder="Contraseña" name="Contraseña" formControlName="password"></div>
                                     <div class="row mb-3">
                                         <p id="errorMsg" class="text-danger" style="display:none;">Paragraph</p>
-                                    </div><button class="btn btn-primary d-block btn-user w-100" id="submitBtn" type="submit">Entrar</button>
+                                    </div><button class="btn btn-primary d-block btn-user w-100" id="submitBtn"
+                                        (click)="login()" type="button">Entrar</button>
                                     <hr>
                                 </form>
                                 <div class="text-center"><a class="small" href="#">Olvidé mi contraseña</a></div>
@@ -31,34 +38,32 @@
                 </div>
             </div>
         </div>
-    </div><script>
-let email = document.getElementById("email")
-let submitBtn = document.getElementById("submitBtn")
-let errorMsg = document.getElementById('errorMsg')
+    </div>
+    <script>
+        let email = document.getElementById("email")
+        let submitBtn = document.getElementById("submitBtn")
+        let errorMsg = document.getElementById('errorMsg')
 
-function displayErrorMsg(e) {
-    errorMsg.style.display = "block"
-    errorMsg.innerHTML = e
-    submitBtn.disabled = true
-}
+        function displayErrorMsg(e) {
+            errorMsg.style.display = "block"
+            errorMsg.innerHTML = e
+            submitBtn.disabled = true
+        }
 
-function hideErrorMsg() {
-    errorMsg.style.display = "none"
-    submitBtn.disabled = false
-}
+        function hideErrorMsg() {
+            errorMsg.style.display = "none"
+            submitBtn.disabled = false
+        }
 
-// Validate email upon change
-email.addEventListener("change", function() {
-    // Check if the email is valid using a regular expression (string@string.string)
-    if(email.value.match(/^[^@]+@[^@]+\.[^@]+$/))
-        hideErrorMsg()
-    else
-        displayErrorMsg("mail invalido")
-});
-</script>
+        // Validate email upon change
+        email.addEventListener("change", function () {
+            // Check if the email is valid using a regular expression (string@string.string)
+            if (email.value.match(/^[^@]+@[^@]+\.[^@]+$/))
+                hideErrorMsg()
+            else
+                displayErrorMsg("mail invalido")
+        });
+    </script>
 </div>
-<script id="bs-live-reload" data-sseport="52051" data-lastchange="1655238422787" src="/js/livereload.js"></script><script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-
-
-
-
+<script id="bs-live-reload" data-sseport="52051" data-lastchange="1655238422787" src="/js/livereload.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>

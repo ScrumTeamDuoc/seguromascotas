@@ -31,6 +31,8 @@ import { FormulariocotizarComponent } from './formulariocotizar/formulariocotiza
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
 import { CardterapiasComponent } from './cardterapias/cardterapias.component';
 import { CardoperacionesComponent } from './cardoperaciones/cardoperaciones.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -67,6 +69,8 @@ import { CardoperacionesComponent } from './cardoperaciones/cardoperaciones.comp
     BrowserModule,
     AppRoutingModule,
     AdminModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
