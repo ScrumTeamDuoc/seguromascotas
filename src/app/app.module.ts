@@ -33,6 +33,8 @@ import { CardterapiasComponent } from './cardterapias/cardterapias.component';
 import { CardoperacionesComponent } from './cardoperaciones/cardoperaciones.component';
 import { CardsresponsiveComponent } from './cardsresponsive/cardsresponsive.component';
 import { ModalinvitadoComponent } from './modalinvitado/modalinvitado.component';
+import { CardcontrataComponent } from './cardcontrata/cardcontrata.component';
+import { LogotituloComponent } from './logotitulo/logotitulo.component';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -64,7 +66,9 @@ import { ModalinvitadoComponent } from './modalinvitado/modalinvitado.component'
     CardterapiasComponent,
     CardoperacionesComponent,
     CardsresponsiveComponent,
-    ModalinvitadoComponent
+    ModalinvitadoComponent,
+    CardcontrataComponent,
+    LogotituloComponent
   ],
   imports: [
     appRoutingProviders,
