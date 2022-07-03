@@ -31,6 +31,8 @@ import { FormulariocotizarComponent } from './formulariocotizar/formulariocotiza
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
 import { CardterapiasComponent } from './cardterapias/cardterapias.component';
 import { CardoperacionesComponent } from './cardoperaciones/cardoperaciones.component';
+import { CardsresponsiveComponent } from './cardsresponsive/cardsresponsive.component';
+import { ModalinvitadoComponent } from './modalinvitado/modalinvitado.component';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -60,7 +62,9 @@ import { CardoperacionesComponent } from './cardoperaciones/cardoperaciones.comp
     FormulariocotizarComponent,
     WhatsappComponent,
     CardterapiasComponent,
-    CardoperacionesComponent
+    CardoperacionesComponent,
+    CardsresponsiveComponent,
+    ModalinvitadoComponent
   ],
   imports: [
     appRoutingProviders,
