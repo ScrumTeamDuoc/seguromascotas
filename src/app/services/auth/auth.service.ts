@@ -19,7 +19,7 @@ export class AuthService {
 
   login(userform: any) {
     //console.log(userform)
-    return this.http.post<any>(`${this.apiUrl}/user`, userform, { headers: this.headers })
+    return this.http.post<any>(`${this.apiUrl}/user?login=true`, userform, { headers: this.headers })
   }
 
   setToken(token: any) {
