@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { 
+  userForm = new FormGroup({
+    email: new FormControl('')
+  })
+  constructor(private auth: AuthService,) {
 
     console.log('FooterComponent cargado');
   }
@@ -15,4 +19,10 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendSubscribe() {
+    let parsedUserData = this.userForm.value
+    this.auth.sendNotification(parsedUserData).subscribe((res: any) => {
+      console.log(res)
+    });
+  }
 }

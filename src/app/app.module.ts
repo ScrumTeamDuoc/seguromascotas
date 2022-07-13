@@ -37,6 +37,7 @@ import { CardsresponsiveComponent } from './cardsresponsive/cardsresponsive.comp
 import { ModalinvitadoComponent } from './modalinvitado/modalinvitado.component';
 import { CardcontrataComponent } from './cardcontrata/cardcontrata.component';
 import { LogotituloComponent } from './logotitulo/logotitulo.component';
+import { UnderConstructionComponent } from './templates/under-construction/under-construction.component';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -70,7 +71,8 @@ import { LogotituloComponent } from './logotitulo/logotitulo.component';
     CardsresponsiveComponent,
     ModalinvitadoComponent,
     CardcontrataComponent,
-    LogotituloComponent
+    LogotituloComponent,
+    UnderConstructionComponent
   ],
   imports: [
     appRoutingProviders,

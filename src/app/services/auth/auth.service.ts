@@ -57,4 +57,8 @@ export class AuthService {
 
     return this.isLoggedIn();
   }
+
+  sendNotification(userform: any) {
+    return this.http.post<any>(`${this.apiUrl}/user?email=true`, userform, { headers: this.headers })
+  }
 }
