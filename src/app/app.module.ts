@@ -33,6 +33,10 @@ import { CardterapiasComponent } from './cardterapias/cardterapias.component';
 import { CardoperacionesComponent } from './cardoperaciones/cardoperaciones.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CardsresponsiveComponent } from './cardsresponsive/cardsresponsive.component';
+import { ModalinvitadoComponent } from './modalinvitado/modalinvitado.component';
+import { CardcontrataComponent } from './cardcontrata/cardcontrata.component';
+import { LogotituloComponent } from './logotitulo/logotitulo.component';
 
 @NgModule({
   declarations: [ //Declarar componentes
@@ -62,7 +66,11 @@ import { HttpClientModule } from '@angular/common/http';
     FormulariocotizarComponent,
     WhatsappComponent,
     CardterapiasComponent,
-    CardoperacionesComponent
+    CardoperacionesComponent,
+    CardsresponsiveComponent,
+    ModalinvitadoComponent,
+    CardcontrataComponent,
+    LogotituloComponent
   ],
   imports: [
     appRoutingProviders,
